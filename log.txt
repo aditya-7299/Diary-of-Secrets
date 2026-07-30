@@ -1,0 +1,3413 @@
+2026-07-30 12:34:29 UTC
+Windows-11-10.0.26200-SP0
+Ren'Py 8.5.3.26051504
+
+Early init took 30 ms
+Loading error handling took 15 ms
+Loading script took 82 ms
+Loading save slot metadata took 18 ms
+Loading persistent took 0 ms
+Running init code took 30 ms
+Loading analysis data took 0 ms
+Analyze and compile ATL took 4 ms
+Reloading save slot metadata took 2 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 0 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 24 ms
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 137 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 8 ms
+Analyze screens took 6 ms
+Save screen analysis took 6 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 363 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+    ~~~~~~~~~~~^^
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2163, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "renpy/display/core.py", line 2842, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 1279, in draw_screen
+    surftree = renpy.display.render.render_screen(
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        root_widget,
+        ^^^^^^^^^^^^
+        renpy.config.screen_width,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        renpy.config.screen_height,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/screen.py", line 767, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1159, in render
+    surf = render(d, width - x, rh, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/behavior.py", line 990, in render
+    rv = super(Button, self).render(width, height, st, at)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/layout.py", line 1394, in render
+    xminimum = max(xminimum, size_groups[size_group].width(width, height, st, at))
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^ 
+  File "renpy/display/layout.py", line 1327, in width
+    rend = renpy.display.render.render_for_size(i, width, height, st, at)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 320, in renpy.display.render.render_for_size
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/behavior.py", line 990, in render
+    rv = super(Button, self).render(width, height, st, at)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/layout.py", line 1444, in render
+    surf = render(child, width - cxmargin - cxpadding, height - cymargin - cypadding, st, at)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/text/text.py", line 2768, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/text/text.py", line 837, in __init__
+    seg_glyphs, rtl = self.glyphs_paragraph(p, order)
+                      ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "renpy/text/text.py", line 1701, in glyphs_paragraph
+    rv.append((ts, ts.glyphs(s[offset:], self, l)))
+                   ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^  
+  File "renpy/text/text.py", line 371, in glyphs
+    fo = font.get_font(
+         ~~~~~~~~~~~~~^
+        self.font,
+        ^^^^^^^^^^
+    ...<11 lines>...
+        self.features,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/text/font.py", line 750, in get_font
+    face = load_face(fn, shaper)
+           ~~~~~~~~~^^^^^^^^^^^^
+  File "renpy/text/font.py", line 668, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font 'Cambria.ttf'.
+
+While running game code:
+  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 320, in renpy.display.render.render_for_size
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+Exception: Could not find font 'Cambria.ttf'.
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+
+Full traceback:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+    ~~~~~~~~~~~^^
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2163, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "renpy/display/core.py", line 2842, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 1279, in draw_screen
+    surftree = renpy.display.render.render_screen(
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        root_widget,
+        ^^^^^^^^^^^^
+        renpy.config.screen_width,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        renpy.config.screen_height,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/screen.py", line 767, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1159, in render
+    surf = render(d, width - x, rh, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/behavior.py", line 990, in render
+    rv = super(Button, self).render(width, height, st, at)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/layout.py", line 1394, in render
+    xminimum = max(xminimum, size_groups[size_group].width(width, height, st, at))
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^ 
+  File "renpy/display/layout.py", line 1327, in width
+    rend = renpy.display.render.render_for_size(i, width, height, st, at)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 320, in renpy.display.render.render_for_size
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/behavior.py", line 990, in render
+    rv = super(Button, self).render(width, height, st, at)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/layout.py", line 1444, in render
+    surf = render(child, width - cxmargin - cxpadding, height - cymargin - cypadding, st, at)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/text/text.py", line 2768, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/text/text.py", line 837, in __init__
+    seg_glyphs, rtl = self.glyphs_paragraph(p, order)
+                      ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "renpy/text/text.py", line 1701, in glyphs_paragraph
+    rv.append((ts, ts.glyphs(s[offset:], self, l)))
+                   ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^  
+  File "renpy/text/text.py", line 371, in glyphs
+    fo = font.get_font(
+         ~~~~~~~~~~~~~^
+        self.font,
+        ^^^^^^^^^^
+    ...<11 lines>...
+        self.features,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/text/font.py", line 750, in get_font
+    face = load_face(fn, shaper)
+           ~~~~~~~~~^^^^^^^^^^^^
+  File "renpy/text/font.py", line 668, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font 'Cambria.ttf'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "renpy/common/00start.rpy", line 297, in script
+    python:
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/00start.rpy", line 301, in <module>
+    renpy.call_in_new_context("_main_menu")
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "renpy/game.py", line 346, in call_in_new_context
+    return renpy.execution.run_context(False)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "renpy/execution.py", line 1050, in run_context
+    context.run()
+    ~~~~~~~~~~~^^
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "renpy/display/error.py", line 135, in report_exception
+    renpy.game.invoke_in_new_context(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        call_exception_screen,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        ignore_action=ignore_action,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/game.py", line 285, in invoke_in_new_context
+    return callable(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "renpy/display/error.py", line 44, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2163, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "renpy/display/core.py", line 2842, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 1279, in draw_screen
+    surftree = renpy.display.render.render_screen(
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        root_widget,
+        ^^^^^^^^^^^^
+        renpy.config.screen_width,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        renpy.config.screen_height,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/screen.py", line 767, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/transform.py", line 1093, in render
+    return RenderTransform(self).render(width, height, st, at)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/accelerator.pyx", line 1020, in renpy.display.accelerator.RenderTransform.render
+  File "renpy/display/accelerator.pyx", line 439, in renpy.display.accelerator.RenderTransform.render_child
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1444, in render
+    surf = render(child, width - cxmargin - cxpadding, height - cymargin - cypadding, st, at)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/text/text.py", line 2768, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/text/text.py", line 837, in __init__
+    seg_glyphs, rtl = self.glyphs_paragraph(p, order)
+                      ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "renpy/text/text.py", line 1701, in glyphs_paragraph
+    rv.append((ts, ts.glyphs(s[offset:], self, l)))
+                   ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^  
+  File "renpy/text/text.py", line 371, in glyphs
+    fo = font.get_font(
+         ~~~~~~~~~~~~~^
+        self.font,
+        ^^^^^^^^^^
+    ...<11 lines>...
+        self.features,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/text/font.py", line 750, in get_font
+    face = load_face(fn, shaper)
+           ~~~~~~~~~^^^^^^^^^^^^
+  File "renpy/text/font.py", line 668, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font 'Cambria.ttf'.
+
+While running game code:
+  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 320, in renpy.display.render.render_for_size
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+Exception: Could not find font 'Cambria.ttf'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/accelerator.pyx", line 1020, in renpy.display.accelerator.RenderTransform.render
+  File "renpy/display/accelerator.pyx", line 439, in renpy.display.accelerator.RenderTransform.render_child
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+Exception: Could not find font 'Cambria.ttf'.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 12 ms
+Loading script took 59 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 5 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 23 ms
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 123 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 6 ms
+Analyze screens took 5 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 305 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+
+Full traceback:
+  File "renpy/common/00start.rpy", line 234, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 551, in script
+    python hide:
+  File "renpy/ast.py", line 1193, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1276, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/00keymap.rpy", line 551, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 565, in _execute_python_hide
+    renpy.load(renpy.session["_reload_slot"])
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/loadsave.py", line 638, in load
+    log.unfreeze(roots, label="_after_load")
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/rollback.py", line 1094, in unfreeze
+    raise Exception("Could not load the game. Perhaps the script changed in an incompatible way.")
+Exception: Could not load the game. Perhaps the script changed in an incompatible way.
+
+While running game code:
+Exception: Could not load the game. Perhaps the script changed in an incompatible way.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 11 ms
+Loading script took 53 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 19 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 22 ms
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 130 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 7 ms
+Analyze screens took 6 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 299 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+
+Full traceback:
+  File "game/script.rpy", line 7, in script
+    call screen city_map
+  File "renpy/ast.py", line 2251, in execute
+    self.call("execute")
+    ~~~~~~~~~^^^^^^^^^^^
+  File "renpy/ast.py", line 2205, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/statements.py", line 381, in call
+    return method(parsed, *args, **kwargs)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/000statements.rpy", line 698, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/statementexports.py", line 341, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2163, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "renpy/display/core.py", line 2842, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 1279, in draw_screen
+    surftree = renpy.display.render.render_screen(
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        root_widget,
+        ^^^^^^^^^^^^
+        renpy.config.screen_width,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        renpy.config.screen_height,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/screen.py", line 767, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1444, in render
+    surf = render(child, width - cxmargin - cxpadding, height - cymargin - cypadding, st, at)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 477, in render
+    xspacing = compute_raw(xspacing, width)
+               ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "renpy/display/position.py", line 198, in compute_raw
+    raise TypeError(f"Value {value} of type {type(value)} not recognized as a position.")
+TypeError: Value (80, 50) of type <class 'tuple'> not recognized as a position.
+
+While running game code:
+  File "game/script.rpy", line 7, in script
+    call screen city_map
+  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+TypeError: Value (80, 50) of type <class 'tuple'> not recognized as a position.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 10 ms
+Loading script took 56 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 5 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 4 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 2 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 23 ms
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 122 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 5 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 279 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 10 ms
+Loading script took 89 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 5 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 26 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 5 ms
+Analyze screens took 6 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 2 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 297 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 17 ms
+5 script files skipped.
+Loading script took 99 ms
+Loading save slot metadata took 18 ms
+Loading persistent took 0 ms
+
+File "game/screens.rpy", line 256: 'zoom' is not a keyword argument or valid child of the imagebutton statement.
+    zoom 0.15
+        ^
+DPI scale factor: 1.000000
+Interface start took 187 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 7 ms
+5 script files skipped.
+Loading script took 67 ms
+Loading save slot metadata took 8 ms
+Loading persistent took 0 ms
+
+File "game/screens.rpy", line 256: 'zoom' is not a keyword argument or valid child of the imagebutton statement.
+    zoom 0.15
+        ^
+DPI scale factor: 1.000000
+Interface start took 205 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 7 ms
+5 script files skipped.
+Loading script took 75 ms
+Loading save slot metadata took 9 ms
+Loading persistent took 0 ms
+
+File "game/screens.rpy", line 256: 'zoom' is not a keyword argument or valid child of the imagebutton statement.
+    zoom 0.15
+        ^
+DPI scale factor: 1.000000
+Interface start took 228 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 7 ms
+5 script files skipped.
+Loading script took 89 ms
+Loading save slot metadata took 8 ms
+Loading persistent took 0 ms
+
+File "game/screens.rpy", line 256: 'zoom' is not a keyword argument or valid child of the imagebutton statement.
+    zoom 0.15
+        ^
+DPI scale factor: 1.000000
+Interface start took 188 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 141 ms
+Loading save slot metadata took 8 ms
+Loading persistent took 1 ms
+Running init code took 35 ms
+Loading analysis data took 11 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 4 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 2 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 29 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 12 ms
+Analyze screens took 6 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 298 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 12 ms
+Loading script took 59 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 10 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 5 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 0 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 25 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 26 ms
+Analyze screens took 4 ms
+Save screen analysis took 6 ms
+Save pyanalysis took 3 ms
+Save bytecode took 0 ms
+Running _start took 2 ms
+Interface start took 314 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 7 ms
+Loading error handling took 21 ms
+Loading script took 81 ms
+Loading save slot metadata took 21 ms
+Loading persistent took 0 ms
+Running init code took 19 ms
+Loading analysis data took 19 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 4 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 39 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 14 ms
+Analyze screens took 7 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 342 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+
+Full traceback:
+  File "game/script.rpy", line 7, in script
+    call screen city_map
+  File "renpy/ast.py", line 2251, in execute
+    self.call("execute")
+    ~~~~~~~~~^^^^^^^^^^^
+  File "renpy/ast.py", line 2205, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/statements.py", line 381, in call
+    return method(parsed, *args, **kwargs)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/000statements.rpy", line 698, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/statementexports.py", line 341, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2163, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "renpy/display/core.py", line 2709, in interact_core
+    root_widget.visit_all(lambda d: d.per_interact())
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 460, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 460, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 460, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/screen.py", line 503, in visit_all
+    callback(self)
+    ~~~~~~~~^^^^^^
+  File "renpy/display/core.py", line 2709, in <lambda>
+    root_widget.visit_all(lambda d: d.per_interact())
+                                    ~~~~~~~~~~~~~~^^ 
+  File "renpy/display/screen.py", line 514, in per_interact
+    self.update()
+    ~~~~~~~~~~~^^
+  File "renpy/display/screen.py", line 715, in update
+    self.screen.function(**self.scope)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "game/map.rpy", line 1, in execute
+    screen city_map():
+  File "game/map.rpy", line 1, in execute
+    screen city_map():
+  File "game/map.rpy", line 12, in execute
+    grid 5 3:
+  File "game/map.rpy", line 17, in execute
+    imagebutton:
+  File "game/map.rpy", line 17, in keywords
+    imagebutton:
+  File "renpy/python.py", line 1308, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1301, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/map.rpy", line 22, in <module>
+    at map_icon_anim
+       ^^^^^^^^^^^^^
+NameError: name 'map_icon_anim' is not defined
+
+While running game code:
+  File "game/script.rpy", line 7, in script
+    call screen city_map
+  File "game/map.rpy", line 1, in execute
+    screen city_map():
+  File "game/map.rpy", line 1, in execute
+    screen city_map():
+  File "game/map.rpy", line 12, in execute
+    grid 5 3:
+  File "game/map.rpy", line 17, in execute
+    imagebutton:
+  File "game/map.rpy", line 17, in keywords
+    imagebutton:
+  File "game/map.rpy", line 22, in <module>
+    at map_icon_anim
+       ^^^^^^^^^^^^^
+NameError: name 'map_icon_anim' is not defined
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 13 ms
+Loading script took 70 ms
+Loading save slot metadata took 18 ms
+Loading persistent took 0 ms
+Running init code took 18 ms
+Loading analysis data took 9 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 5 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 36 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 9 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 2 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 316 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 19 ms
+Loading script took 63 ms
+Loading save slot metadata took 21 ms
+Loading persistent took 0 ms
+Running init code took 17 ms
+Loading analysis data took 14 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 32 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 13 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 334 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+
+Full traceback:
+  File "game/script.rpy", line 12, in script
+    call screen city_map
+  File "renpy/ast.py", line 2251, in execute
+    self.call("execute")
+    ~~~~~~~~~^^^^^^^^^^^
+  File "renpy/ast.py", line 2205, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/statements.py", line 381, in call
+    return method(parsed, *args, **kwargs)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/000statements.rpy", line 698, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/statementexports.py", line 341, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2163, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "renpy/display/core.py", line 2842, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 1279, in draw_screen
+    surftree = renpy.display.render.render_screen(
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        root_widget,
+        ^^^^^^^^^^^^
+        renpy.config.screen_width,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        renpy.config.screen_height,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/screen.py", line 767, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1444, in render
+    surf = render(child, width - cxmargin - cxpadding, height - cymargin - cypadding, st, at)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1104, in render
+    surf = render(d, rw, height - y, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1104, in render
+    surf = render(d, rw, height - y, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/text/text.py", line 2768, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/text/text.py", line 837, in __init__
+    seg_glyphs, rtl = self.glyphs_paragraph(p, order)
+                      ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "renpy/text/text.py", line 1701, in glyphs_paragraph
+    rv.append((ts, ts.glyphs(s[offset:], self, l)))
+                   ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^  
+  File "renpy/text/text.py", line 371, in glyphs
+    fo = font.get_font(
+         ~~~~~~~~~~~~~^
+        self.font,
+        ^^^^^^^^^^
+    ...<11 lines>...
+        self.features,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/text/font.py", line 750, in get_font
+    face = load_face(fn, shaper)
+           ~~~~~~~~~^^^^^^^^^^^^
+  File "renpy/text/font.py", line 668, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font 'gui/fonts/cambria.ttf'.
+
+While running game code:
+  File "game/script.rpy", line 12, in script
+    call screen city_map
+  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+Exception: Could not find font 'gui/fonts/cambria.ttf'.
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 14 ms
+Loading script took 57 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 5 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Dump and make backups took 0 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 27 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 14 ms
+Analyze screens took 1 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 296 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+
+Full traceback:
+  File "game/script.rpy", line 12, in script
+    call screen city_map
+  File "renpy/ast.py", line 2251, in execute
+    self.call("execute")
+    ~~~~~~~~~^^^^^^^^^^^
+  File "renpy/ast.py", line 2205, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/statements.py", line 381, in call
+    return method(parsed, *args, **kwargs)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/000statements.rpy", line 698, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/statementexports.py", line 341, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2163, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "renpy/display/core.py", line 2842, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 1279, in draw_screen
+    surftree = renpy.display.render.render_screen(
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        root_widget,
+        ^^^^^^^^^^^^
+        renpy.config.screen_width,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        renpy.config.screen_height,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/screen.py", line 767, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1444, in render
+    surf = render(child, width - cxmargin - cxpadding, height - cymargin - cypadding, st, at)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1104, in render
+    surf = render(d, rw, height - y, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1104, in render
+    surf = render(d, rw, height - y, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/text/text.py", line 2768, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/text/text.py", line 837, in __init__
+    seg_glyphs, rtl = self.glyphs_paragraph(p, order)
+                      ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "renpy/text/text.py", line 1701, in glyphs_paragraph
+    rv.append((ts, ts.glyphs(s[offset:], self, l)))
+                   ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^  
+  File "renpy/text/text.py", line 371, in glyphs
+    fo = font.get_font(
+         ~~~~~~~~~~~~~^
+        self.font,
+        ^^^^^^^^^^
+    ...<11 lines>...
+        self.features,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/text/font.py", line 750, in get_font
+    face = load_face(fn, shaper)
+           ~~~~~~~~~^^^^^^^^^^^^
+  File "renpy/text/font.py", line 668, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font 'gui/fonts/cambria.ttf'.
+
+While running game code:
+  File "game/script.rpy", line 12, in script
+    call screen city_map
+  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+Exception: Could not find font 'gui/fonts/cambria.ttf'.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 9 ms
+Loading error handling took 5 ms
+Loading script took 55 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 15 ms
+Loading analysis data took 5 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 6 ms
+Dump and make backups took 0 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 27 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 1 ms
+Load screen analysis took 8 ms
+Analyze screens took 1 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 284 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 7 ms
+Loading script took 59 ms
+Loading save slot metadata took 17 ms
+Loading persistent took 0 ms
+Running init code took 17 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 5 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 2 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 28 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 317 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 15 ms
+Loading script took 140 ms
+Loading save slot metadata took 19 ms
+Loading persistent took 0 ms
+Running init code took 22 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 32 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 1 ms
+Load screen analysis took 19 ms
+Analyze screens took 7 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 302 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 14 ms
+Loading script took 58 ms
+Loading save slot metadata took 14 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 10 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Dump and make backups took 0 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 28 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 16 ms
+Analyze screens took 0 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 291 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 6 ms
+Loading script took 101 ms
+Loading save slot metadata took 25 ms
+Loading persistent took 0 ms
+Running init code took 21 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 5 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 33 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 1 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 2 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 309 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 7 ms
+Loading script took 58 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 17 ms
+Loading analysis data took 10 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Dump and make backups took 0 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 31 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 15 ms
+Analyze screens took 1 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 309 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 7 ms
+Loading script took 96 ms
+Loading save slot metadata took 19 ms
+Loading persistent took 0 ms
+Running init code took 22 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 4 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 34 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 4 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 2 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 319 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 59 ms
+Loading save slot metadata took 11 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 10 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Dump and make backups took 0 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 29 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 15 ms
+Analyze screens took 0 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 305 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 7 ms
+Loading error handling took 6 ms
+Loading script took 58 ms
+Loading save slot metadata took 16 ms
+Loading persistent took 0 ms
+Running init code took 18 ms
+Loading analysis data took 5 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 5 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 35 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 1 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 316 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+
+Full traceback:
+  File "game/script.rpy", line 12, in script
+    call screen city_map
+  File "renpy/ast.py", line 2251, in execute
+    self.call("execute")
+    ~~~~~~~~~^^^^^^^^^^^
+  File "renpy/ast.py", line 2205, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/statements.py", line 381, in call
+    return method(parsed, *args, **kwargs)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/000statements.rpy", line 698, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/statementexports.py", line 341, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ui.py", line 306, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2163, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "renpy/display/core.py", line 2709, in interact_core
+    root_widget.visit_all(lambda d: d.per_interact())
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 460, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 460, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/displayable.py", line 460, in visit_all
+    d.visit_all(callback, seen)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "renpy/display/screen.py", line 503, in visit_all
+    callback(self)
+    ~~~~~~~~^^^^^^
+  File "renpy/display/core.py", line 2709, in <lambda>
+    root_widget.visit_all(lambda d: d.per_interact())
+                                    ~~~~~~~~~~~~~~^^ 
+  File "renpy/display/screen.py", line 514, in per_interact
+    self.update()
+    ~~~~~~~~~~~^^
+  File "renpy/display/screen.py", line 715, in update
+    self.screen.function(**self.scope)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "game/map.rpy", line 1, in execute
+    screen city_map():
+  File "game/map.rpy", line 1, in execute
+    screen city_map():
+  File "game/map.rpy", line 6, in execute
+    grid 5 3:
+  File "game/map.rpy", line 12, in execute
+    imagebutton:
+  File "game/map.rpy", line 12, in keywords
+    imagebutton:
+  File "renpy/python.py", line 1308, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1301, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/map.rpy", line 17, in <module>
+    at map_icon_anim
+       ^^^^^^^^^^^^^
+NameError: name 'map_icon_anim' is not defined
+
+While running game code:
+  File "game/script.rpy", line 12, in script
+    call screen city_map
+  File "game/map.rpy", line 1, in execute
+    screen city_map():
+  File "game/map.rpy", line 1, in execute
+    screen city_map():
+  File "game/map.rpy", line 6, in execute
+    grid 5 3:
+  File "game/map.rpy", line 12, in execute
+    imagebutton:
+  File "game/map.rpy", line 12, in keywords
+    imagebutton:
+  File "game/map.rpy", line 17, in <module>
+    at map_icon_anim
+       ^^^^^^^^^^^^^
+NameError: name 'map_icon_anim' is not defined
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 25 ms
+Loading script took 67 ms
+Loading save slot metadata took 17 ms
+Loading persistent took 0 ms
+Running init code took 17 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 5 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 33 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 15 ms
+Analyze screens took 6 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 324 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 7 ms
+Loading error handling took 6 ms
+Loading script took 75 ms
+Loading save slot metadata took 18 ms
+Loading persistent took 0 ms
+Running init code took 17 ms
+Loading analysis data took 9 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 7 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 32 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 14 ms
+Analyze screens took 6 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 335 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 7 ms
+Loading script took 117 ms
+Loading save slot metadata took 17 ms
+Loading persistent took 0 ms
+Running init code took 21 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 33 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 15 ms
+Analyze screens took 6 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 2 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 317 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 16 ms
+Loading script took 75 ms
+Loading save slot metadata took 16 ms
+Loading persistent took 0 ms
+Running init code took 18 ms
+Loading analysis data took 18 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 5 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 35 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 8 ms
+Analyze screens took 6 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 316 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 11 ms
+Loading script took 57 ms
+Loading save slot metadata took 11 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 4 ms
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 29 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 15 ms
+Analyze screens took 1 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 313 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 51 ms
+Loading save slot metadata took 15 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 5 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 5 ms
+Dump and make backups took 0 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 28 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 9 ms
+Analyze screens took 0 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 328 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 52 ms
+Loading save slot metadata took 16 ms
+Loading persistent took 0 ms
+Running init code took 15 ms
+Loading analysis data took 7 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 4 ms
+Dump and make backups took 0 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 30 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 9 ms
+Analyze screens took 1 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 284 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 5 ms
+Loading script took 49 ms
+Loading save slot metadata took 14 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Dump and make backups took 0 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 31 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 9 ms
+Analyze screens took 1 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 331 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Requested resize to 1818x1023, fullscreen=1, maximized=0
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1200) drawable=(1920, 1200)
+Maximum texture size: 4096x4096
+Requested resize to 1818x1023, fullscreen=0, maximized=1
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 57 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 7 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 4 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 34 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 2 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 297 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 14 ms
+Loading script took 57 ms
+Loading save slot metadata took 15 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 11 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 5 ms
+Dump and make backups took 0 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 30 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 14 ms
+Analyze screens took 0 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 286 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Resize event: <Event(65533-VIDEORESIZE h=1177, mod=0, size=(1920, 1177), w=1920)>
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 6 ms
+Loading script took 56 ms
+Loading save slot metadata took 14 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 1 ms
+Making clean stores took 0 ms
+Initial gc took 33 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 326 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 7 ms
+Loading script took 59 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 33 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 5 ms
+Analyze screens took 5 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 304 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 11 ms
+Loading script took 58 ms
+Loading save slot metadata took 11 ms
+Loading persistent took 0 ms
+Running init code took 17 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 5 ms
+Dump and make backups took 0 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 32 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 1 ms
+Load screen analysis took 15 ms
+Analyze screens took 1 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 317 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Resize event: <Event(65533-VIDEORESIZE h=1177, mod=0, size=(1920, 1177), w=1920)>
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 58 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 7 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 5 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 35 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 298 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 6 ms
+Loading script took 59 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 1 ms
+Running init code took 15 ms
+Loading analysis data took 7 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 5 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 32 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 5 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 330 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 61 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 17 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 34 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 5 ms
+Analyze screens took 5 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 327 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 67 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 34 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 5 ms
+Analyze screens took 5 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 328 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 67 ms
+Loading save slot metadata took 14 ms
+Loading persistent took 0 ms
+Running init code took 17 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 3 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 33 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 6 ms
+Analyze screens took 5 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 321 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Resize event: <Event(65533-VIDEORESIZE h=1177, mod=0, size=(1920, 1177), w=1920)>
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 61 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 7 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 34 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 6 ms
+Analyze screens took 5 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 322 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 63 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 7 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 37 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 7 ms
+Analyze screens took 6 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 303 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 6 ms
+Loading script took 59 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 17 ms
+Loading analysis data took 7 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 34 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 5 ms
+Analyze screens took 5 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 335 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Resize event: <Event(65533-VIDEORESIZE h=1177, mod=0, size=(1920, 1177), w=1920)>
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 62 ms
+Loading save slot metadata took 14 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 7 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 5 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 33 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 6 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 300 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 6 ms
+Loading script took 62 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 17 ms
+Loading analysis data took 7 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 5 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 0 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 33 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 5 ms
+Analyze screens took 5 ms
+Save screen analysis took 7 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 299 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 6 ms
+Loading script took 60 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 5 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 32 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 6 ms
+Analyze screens took 4 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 327 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 58 ms
+Loading save slot metadata took 11 ms
+Loading persistent took 0 ms
+Running init code took 16 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Dump and make backups took 0 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 32 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 15 ms
+Analyze screens took 1 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 305 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 8 ms
+Loading error handling took 6 ms
+Loading script took 69 ms
+Loading save slot metadata took 14 ms
+Loading persistent took 0 ms
+Running init code took 17 ms
+Loading analysis data took 7 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 5 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 36 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 10 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 324 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 62 ms
+Loading save slot metadata took 15 ms
+Loading persistent took 0 ms
+Running init code took 17 ms
+Loading analysis data took 8 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 2 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 43 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 11 ms
+Analyze screens took 5 ms
+Save screen analysis took 10 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 322 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:closing websocket connection :40111
+INFO:renpy_warp_service:connection replaced, service exiting
+INFO:renpy_warp_service:service closed
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 11 ms
+4 script files skipped.
+Loading script took 56 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+
+File "game/script.rpy", line 58: end of line expected.
+    jump map_looplabel home_event:
+                       ^
+DPI scale factor: 1.000000
+Interface start took 198 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 7 ms
+4 script files skipped.
+Loading script took 53 ms
+Loading save slot metadata took 7 ms
+Loading persistent took 0 ms
+
+File "game/script.rpy", line 58: end of line expected.
+    jump map_looplabel home_event
+                       ^
+DPI scale factor: 1.000000
+Interface start took 200 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Resize event: <Event(65533-VIDEORESIZE h=1177, mod=0, size=(1920, 1177), w=1920)>
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 6 ms
+4 script files skipped.
+Loading script took 51 ms
+Loading save slot metadata took 7 ms
+Loading persistent took 0 ms
+
+File "game/script.rpy", line 58: end of line expected.
+    jump map_looplabel home_event
+                       ^
+DPI scale factor: 1.000000
+Interface start took 190 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+4 script files skipped.
+Loading script took 48 ms
+Loading save slot metadata took 7 ms
+Loading persistent took 1 ms
+
+File "game/script.rpy", line 58: end of line expected.
+    jump map_looplabel home_event
+                       ^
+DPI scale factor: 1.000000
+Interface start took 177 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 6 ms
+Loading script took 57 ms
+Loading save slot metadata took 7 ms
+Loading persistent took 0 ms
+Running init code took 39 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 4 ms
+Backing up script files to 'C:\\Users\\adi\\AppData\\Roaming/RenPy/backups\\Diary_of_Secrets':
+Dump and make backups took 1 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 31 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 6 ms
+Analyze screens took 6 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 289 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1200)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 610.74'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1200, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:service thread started. periodically scanning ports for warp server
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+INFO:renpy_warp_service:connected to renpy warp socket server on :40111
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1177) drawable=(1920, 1177)
+Maximum texture size: 4096x4096

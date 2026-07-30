@@ -1,0 +1,46 @@
+label salone_start:
+    $ q_manager.register("sal_intro_1", "The First Day", "Head downstairs to start the morning.", "salone")
+    $ q_manager.start("sal_intro_1")
+    
+    show screen main_hud
+    
+    s "Just another ordinary morning, though I suppose my diary would disagree."
+    
+    # Jump into the main navigation loop
+    jump salone_map_loop
+
+label salone_map_loop:
+    # Clear the master layer to prevent overlapping
+    scene black 
+    
+    # Call the map and wait for the user to click a hotspot
+    call screen city_map
+    $ location = _return
+    
+    # Route the player based on their choice
+    if location == "home":
+        scene bg home_second_floor_top
+        
+        # Complete the intro quest if it's active
+        if q_manager.active_quest_id == "sal_intro_1":
+            $ q_manager.complete("sal_intro_1")
+            s "Back home. Time to start the day."
+            
+        # Example of stopping here to let scene play out
+        "You relax in your room."
+        
+    elif location == "office":
+        scene bg office_top
+        s "Time to get some work done."
+        
+    else:
+        # Fallback for all other unimplemented locations
+        call coming_soon_location
+        
+        # Ensure HUD is turned back on after the black screen
+        show screen main_hud 
+        
+        # Loop right back to the map
+        jump salone_map_loop
+        
+    return
